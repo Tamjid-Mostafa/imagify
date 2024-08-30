@@ -1,5 +1,4 @@
 import { Schema, model, models } from "mongoose";
-import { Types } from "mongoose";
 
 export interface IUser {
   clerkId: string;
