@@ -1,5 +1,4 @@
 /* eslint-disable camelcase */
-'use client'
 import { WebhookEvent, clerkClient } from "@clerk/nextjs/server";
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
@@ -69,7 +68,7 @@ export async function POST(req: Request) {
       lastName: last_name || "",
       photo: image_url,
     };
-
+console.log(user);
     const newUser = await createUser(user);
 
     // Set public metadata
