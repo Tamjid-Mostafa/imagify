@@ -1,37 +1,93 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🖼️ Imagify AI – Smart Image Processing App
 
-## Getting Started
+**Imagify** is a full-stack AI-powered image enhancement platform that lets users restore, erase, and clean up images with just a few clicks.
 
-First, run the development server:
+From background removal to object erasing and color restoration — this tool helps creators, designers, and businesses transform visuals effortlessly.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+👉 Live: [imagify-gold.vercel.app](https://imagify-gold.vercel.app)
+
+---
+
+## ✨ Features
+
+- 🧠 AI-based image enhancement (background removal, object erasing, restoration)
+- ⚡ Credit-based system with 3 free credits on sign-up
+- 🔐 Auth system via Clerk
+- 💾 Upload & serve images via Cloudinary
+- 💳 Stripe integration for credit top-ups
+- 🎨 Modern, responsive UI built with TailwindCSS
+- 🧾 Dashboard to track transformations & usage
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 14  
+- **Frontend**: React 18, TailwindCSS, Radix UI, Lucide Icons  
+- **State & Forms**: React Hook Form + Zod  
+- **Auth**: Clerk (OAuth, JWT)  
+- **Storage**: Cloudinary via `next-cloudinary`  
+- **Database**: MongoDB (via Mongoose)  
+- **Payments**: Stripe  
+- **Other**: Svix (Webhooks), QS, Tailwind Merge
+
+---
+
+## 🗂 Folder Structure (simplified)
+
+```
+src/
+├── app/
+│   ├── (auth)/              # Sign-in / Sign-up logic
+│   ├── (root)/              # Main pages
+│   │   ├── credits/         # Credit history and purchase
+│   │   ├── profile/         # User profile & usage stats
+│   │   ├── transformations/ # Uploaded and processed images
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── api/webhooks/
+│   │   ├── clerk/           # Clerk webhook
+│   │   └── stripe/          # Stripe webhook
+├── public/
+├── styles/
+├── layout.tsx
+├── globals.css
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```env
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+MONGODB_URI=
+CLOUDINARY_API_KEY=
+CLOUDINARY_SECRET=
+STRIPE_SECRET_KEY=
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+STRIPE_WEBHOOK_SECRET=
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧪 Run Locally
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+git clone https://github.com/tamjid-mostafa/imagify-ai
+cd imagify-ai
+pnpm install
+pnpm dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📬 Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- GitHub: [github.com/tamjid-mostafa](https://github.com/tamjid-mostafa)  
+- Website: [devtamjid.com](https://devtamjid.com)  
+- Email: hello@devtamjid.com  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# imagify
+---
+
+> Smart image editing. AI-powered workflow. Lightning-fast results.
